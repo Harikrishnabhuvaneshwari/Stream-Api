@@ -11,7 +11,7 @@ import java.util.function.Predicate;
  * package: java.util.function
  * It's a functional interface and can refer lambda expression which can take T as input parameter 
  * return any type R as output.
- * apply is the SAM,(andThen,compose are default methods).
+ * apply is the SAM,(andThen,compose are default methods) and identity is the static method.
  * @author hprakash
  *
  */
@@ -37,7 +37,6 @@ public class FunctionTest {
 		//Function to count spaces present in the given string
 		Function<String,Integer> functionToCountSpaces=str->str.length()-str.replace(" ", "").length();
 		System.out.println("No of spaces present in the entered string : "+functionToCountSpaces.apply(s));
-		scanner.close();
 
 		//Function to increment salary for employees using Predicate.
 		List<Employee> employees=new ArrayList<>();
@@ -57,8 +56,26 @@ public class FunctionTest {
 			System.out.println(employee);
 			System.out.println();
 		}
-		
+
 		//Function Chaining
+		//Pgm for user authentication.
+		System.out.println("Enter username :");
+		String user=scanner.next();
+		System.out.println("Entert password :");
+		String pwd=scanner.next();
+		Function<String,String> functionToGetSubString=userName->userName.substring(0, 4);
+		Function<String,String> functionToConvertToLowerCase=userName->userName.toLowerCase();
+		Predicate<String> predicateToCheckUserName=userName->userName.equals("hari");
+		Predicate<String> predicateToCheckPwd=pwsd->pwsd.equals("java");
+		if(predicateToCheckUserName.test(functionToGetSubString.andThen(functionToConvertToLowerCase).apply(user))
+				&&predicateToCheckPwd.test(pwd)){
+			System.out.println("Authenticated User");
+		}
+		scanner.close();
+
+		//Function's static method identity(will always return input as its output i.e., its return is
+		//input itself).
+		Function<String, String> identityFunction = Function.identity();
+		System.out.println(identityFunction.apply("doctor"));
 	}
 }
-

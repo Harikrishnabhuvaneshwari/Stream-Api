@@ -1,0 +1,41 @@
+Predicate : 
+
+purpose ----> to perform conditional check on the given input and return boolean value.
+interface declaration ---->  interface Predicate<T>{
+								.......
+								}
+abstract method ------->  boolean test(T t);
+default method -----> and,or,negate 
+static method -----> isEqual
+
+Function :
+
+purpose ----> to perform some operation on given input and return some result.
+interface declaration ---->  interface Function<T,R>{
+								......
+								}
+abstract method -----> R apply(T t);
+default method ------> andThen,compose
+static method ------> identity
+
+Consumer :
+
+purpose ----> to consume some input and perform some operation on it without returning anything.
+interface declaration ----->   interface Consumer<T>{
+									........
+									}
+abstract method ------> void accept(T t);
+default method -------> andThen
+static method - no static method found
+
+Supplier  :  
+
+purpose -----> to return some value provided no input.
+interface declaration ------->   interface Supplier<R>{
+									.......
+									}
+abstract method ----> R get();
+default method ----> no default method found.
+static method -----> no static method found.
+
+						

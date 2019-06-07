@@ -54,6 +54,9 @@ public class PredicateTest {
 				System.out.println("Not Allowed : Age: "+softwareEngineer.age+" GF: "+softwareEngineer.isGf);
 			}
 		}
+
+		//isEqual static method in Predicate interface is used to check the equality of '
+		//two objects.
 		Predicate<PredicateTest> isEqualPredicate = Predicate.isEqual(new PredicateTest());
 		System.out.println(isEqualPredicate.test(new PredicateTest()));
 	}
