@@ -1,4 +1,4 @@
-package com.stream.functionalinterfaces.function;
+package com.stream.functionalinterfaces.Common;
 
 public class Employee {
 	String name;

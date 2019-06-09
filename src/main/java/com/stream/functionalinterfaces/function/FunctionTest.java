@@ -6,6 +6,8 @@ import java.util.Scanner;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
+import com.stream.functionalinterfaces.Common.Employee;
+
 /**
  * What is Function?
  * package: java.util.function
