@@ -49,7 +49,7 @@ public class StreamTest {
 		List<String> nameList=Arrays.asList("apple","avacado","alovera","banana","beetroot","cashew","dragonfruit","doughnut");
 		
 		
-		
+		nameList.stream();
 
 		List<Integer> doneIndex=new ArrayList<>();
 		List<List<String>> groupedList=new ArrayList<>();

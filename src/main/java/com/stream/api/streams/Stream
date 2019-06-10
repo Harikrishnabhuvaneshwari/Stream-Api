@@ -1,0 +1,40 @@
+Streams::::::::::::::::::::::::::::::::::::::::::::::::::::
+To process collection, to perform bulk operations.
+Since 1.8 ver of java.
+package : java.util.stream.
+How to create stream of collection : CollectionName.stream();
+stream() is a default method found in Collection interface.
+Stream itself is an interface.
+
+filter:::::::::::::::::::::::::::::::::::::::::::::::
+* used to filter elements of collection using Predicate based on some condition.
+* returns Stream of elements after filtered using Predicate.
+
+map::::::::::::::::::::::::::::::::::::::::::::::
+* Returns a stream consisting of the results of applying the given
+function to the elements of this stream.
+
+count:::::::::::::::::::::::::
+* Returns the count of elements present in the stream.
+
+sorted::::::::::::::::::::::::
+* used to sort the elements present in the stream.
+* sorted() --> sort elements based on natural order(Class should implement Comparable interface).
+* sorted(Comparator) --> sort elements based on customized order specified by the Comparator interface.
+
+min and max method::::::::::::::::
+* min method returns the minimum value based on the applied Comparator into it from the stream.
+* max method returns the maximum value based in the applied Comparator into it from the stream.
+
+forEach:::::::::::::::::::::::
+* same as Consumer interface, will consume an element from stream and performs the users defined operation
+on the element and won't return anything. 
+
+toArray::::::::::::::::::::::::::::::::
+* copy elements from stream to array specified.
+
+Stream.of method:::::::::::::::::::
+* we can apply stream for arrays,group of objects etc.
+
+
+
